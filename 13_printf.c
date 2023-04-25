@@ -2,7 +2,7 @@
 #include <stdarg.h>
 #include <stdlib.h>
 #include <string.h>
-
+#include "main.h"
 /**
  * _printf - prints
  *
@@ -23,7 +23,7 @@
 int _printf(const char *format, ...)
 {
 
-int num, j, i = 0;
+int j, i = 0;
 char *str;
 
 int len;
