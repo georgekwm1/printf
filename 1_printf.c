@@ -17,7 +17,7 @@
 int _printf(const char *format, ...)
 {
 
-int num , i = 0;
+int num, i = 0;
 
 va_list str_list;
 
@@ -49,7 +49,7 @@ putchar(*format);
 i++;
 }
 format++;
-  }
+}
 va_end(str_list);
-return 0;
+return (0);
 }

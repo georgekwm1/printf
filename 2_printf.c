@@ -28,7 +28,8 @@ va_start(str_list, format);
 
 if (*format)
 {
-if (*format == '%'){
+if (*format == '%')
+{
 (format++);
 switch (*format)
 {
@@ -36,7 +37,8 @@ case 'b':
 bin_num = va_arg(str_list, int);
 j = (sizeof(mod_sto) / 4) - 1;
 
-while (bin_num){
+while (bin_num)
+{
 
 if (bin_num > 0)
 mod = bin_num % 2;
@@ -62,5 +64,5 @@ i++;
 format++;
 }
 va_end(str_list);
-return 0;
+return (0);
 }

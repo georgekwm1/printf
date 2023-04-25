@@ -20,10 +20,10 @@
  * Return: Always 0 (Success)
  */
 
- int _printf(const char *format, ...)
+int _printf(const char *format, ...)
 {
 
-int num,j , i = 0;
+int num, j, i = 0;
 char *str;
 
 int len;
@@ -32,7 +32,8 @@ va_list str_list;
 va_start(str_list, format);
 if (*format)
 {
-if (*format == '%'){
+if (*format == '%')
+{
 (format++);
 switch (*format)
 {
@@ -40,8 +41,9 @@ switch (*format)
 case 'r':
 str = va_arg(str_list, char*);
 len = strlen(str);
-j = len -1;
-while(j >= 0){
+j = len - 1;
+while (j >= 0)
+{
 printf("%c", str[j]);
 j--;
 }
@@ -56,5 +58,5 @@ i++;
 format++;
 }
 va_end(str_list);
-return 0;
+return (0);
 }

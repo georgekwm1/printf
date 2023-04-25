@@ -22,7 +22,8 @@ va_list str_list;
 va_start(str_list, format);
 if (*format)
 {
-if (*format == '%'){
+if (*format == '%')
+{
 (format++);
 switch (*format)
 {
@@ -34,12 +35,10 @@ break;
 
 case 'c':
 charac = va_arg(str_list, int);
- //i++;
 printf("%c", charac);
 break;
 
 case '%':
-str = va_arg(str_list, char*);
 printf("%%");
 break;
 }
@@ -52,5 +51,5 @@ i++;
 format++;
 }
 va_end(str_list);
-return 0;
+return (0);
 }
