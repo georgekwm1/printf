@@ -75,7 +75,7 @@ int print_non_printable(va_list types, char buffer[],
 	if (str == NULL)
 		return (write(1, "(null)", 6));
 
-	while (str[i] != '\0')
+	while (str[x] != '\0')
 	{
 		if (is_printable(str[x]))
 			buffer[x + offset] = str[x];
@@ -123,7 +123,7 @@ int print_reverse(va_list types, char buffer[],
 	for (x = 0; str[x]; x++)
 		;
 
-	for (x = x - 1; x >= 0; i--)
+	for (x = x - 1; x >= 0; x--)
 	{
 		char z = str[x];
 
@@ -162,7 +162,7 @@ int print_rot13string(va_list types, char buffer[],
 
 	if (str == NULL)
 		str = "(AHYY)";
-	for (i = 0; str[u]; u++)
+	for (u = 0; str[u]; u++)
 	{
 		for (v = 0; in[v]; v++)
 		{

@@ -76,7 +76,7 @@ int print_octal(va_list types, char buffer[],
 }
 
 /**
- * print_hexadecimal - Prints an unsigned number in hexadecimal notation
+ * print_hexadecimal - Prints an unsigned number in hexadecimal
  * @types: ...
  * @buffer: ...
  * @flags:  ...
@@ -134,7 +134,7 @@ int print_hexa(va_list types, char map_to[], char buffer[],
 	num = convert_size_unsgnd(num, size);
 
 	if (num == 0)
-		buffer[i--] = '0';
+		buffer[x--] = '0';
 
 	buffer[BUFF_SIZE - 1] = '\0';
 
